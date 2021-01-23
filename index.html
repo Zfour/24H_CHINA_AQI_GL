@@ -87,25 +87,6 @@
                         }
                     }],
                     series: [{
-                        name: 'AQI',
-                        type: "bar3D",
-                        coordinateSystem: 'geo3D',
-                        barSize: 0.8, //柱子粗细
-                        shading: 'realistic',
-
-                        realisticMaterial: {
-                            metalness: 1,
-                            roughness: 0.2,
-                        },
-                        instancing: true,
-                        animation: true,
-                        animationDurationUpdate: 1000,
-                        opacity: 1,
-                        bevelSize: 0.3,
-                        label: {
-                            show: false,
-                            formatter: '{b}'
-                        },
                         data: convertData(itemdatalist),
                     }]
                 });
@@ -285,7 +266,6 @@
                 data: [],
             }]
         },
-
         options: [],
     };
     var convertData = function (arr) {
