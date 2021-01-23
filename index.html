@@ -68,70 +68,6 @@
                 timeLineData.push(Number(gettime))
                 option.baseOption.timeline.data.push(Number(gettime));
                 option.options.push({
-                    geo3D: {
-                        environment: 'black',
-                        boxHeight: 20,
-                        map: 'china',
-                        roam: true,
-                        realisticMaterial: {
-                            detailTexture: '#666',
-                            textureTiling:1,
-                            metalness:0,
-                            roughness:0.5,
-
-                        },
-                        label: {
-                            show: false,
-                            textStyle: {
-                                color: '#fff', //地图初始化区域字体颜色
-                                fontSize: 8,
-                                opacity: 1,
-                                backgroundColor: 'rgba(0,23,11,0)'
-                            },
-                        },
-                        postEffect: {
-                            enable: true,
-                            SSAO: {
-                                enable: true,
-                                radius: 1,
-                                quality: 'high'
-                            }
-                        },
-                        shading: 'realistic',
-                        itemStyle: {
-                            color: '#4b4b4b',
-                            opacity: 1,
-                            borderWidth: 0.4,
-                            borderColor: '#383838'
-                        },
-                        emphasis: { //当鼠标放上去  地区区域是否显示名称
-                            label: {
-                                show: true,
-                                textStyle: {
-                                    color: '#fff',
-                                    fontSize: 3,
-                                    backgroundColor: 'rgba(0,23,11,0)'
-                                }
-                            }
-                        },
-                        //shading: 'lambert',
-                        light: {
-                            main: {
-                                intensity: 1,
-                                shadow: true,
-                                shadowQuality: 'high'
-                            },
-                            ambient: {
-                                intensity: 1.
-                            },
-                            ambientCubemap: {
-                                texture: './images/data-1491838644249-ry33I7YTe.hdr',
-                                exposure: 2.5,
-                                diffuseIntensity: 0.5,
-                                specularIntensity: 2
-                            }
-                        }
-                    },
                     title: [{
                         text: timetext,
                         textAlign: 'center',
@@ -261,6 +197,70 @@
                     label: '严重污染',
                     color: '#62001e'
                 },],
+            },
+            geo3D: {
+                environment: 'black',
+                boxHeight: 20,
+                map: 'china',
+                roam: true,
+                realisticMaterial: {
+                    detailTexture: '#666',
+                    textureTiling:1,
+                    metalness:0,
+                    roughness:0.5,
+
+                },
+                label: {
+                    show: false,
+                    textStyle: {
+                        color: '#fff', //地图初始化区域字体颜色
+                        fontSize: 8,
+                        opacity: 1,
+                        backgroundColor: 'rgba(0,23,11,0)'
+                    },
+                },
+                postEffect: {
+                    enable: true,
+                    SSAO: {
+                        enable: true,
+                        radius: 1,
+                        quality: 'high'
+                    }
+                },
+                shading: 'realistic',
+                itemStyle: {
+                    color: '#4b4b4b',
+                    opacity: 1,
+                    borderWidth: 0.4,
+                    borderColor: '#111'
+                },
+                emphasis: { //当鼠标放上去  地区区域是否显示名称
+                    label: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 3,
+                            backgroundColor: 'rgba(0,23,11,0)'
+                        }
+                    }
+                },
+                //shading: 'lambert',
+                light: {
+                    main: {
+                        intensity: 1,
+                        shadow: true,
+                        shadowQuality: 'high'
+                    },
+                    ambient: {
+                        intensity: 1.
+                    },
+                    ambientCubemap: {
+                        texture: './images/data-1491838644249-ry33I7YTe.hdr',
+                        exposure: 2.5,
+                        diffuseIntensity: 0.5,
+                        specularIntensity: 2
+                    }
+                }
             },
             series: [{
                 name: 'AQI',
