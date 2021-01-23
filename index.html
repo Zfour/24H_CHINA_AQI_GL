@@ -290,4 +290,8 @@
             return ((x < y) ? -1 : ((x > y) ? 1 : 0));
         });
     }
+    if(screen.width < 768){
+        option.baseOption.series[0].shading = "lambert"
+        myChart.setOption(option);
+    }
 </script>
