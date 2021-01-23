@@ -26,7 +26,6 @@
 <script src="./js/echarts.min.js"></script>
 <script src="./js/china.js"></script>
 <script src="./js/echarts-gl.min.js"></script>
-<script src="./js/mapbox-gl.js"></script>
 <script src="./js/location.js"></script>
 <script>
     timeLineData = []
@@ -74,33 +73,36 @@
                         boxHeight: 20,
                         map: 'china',
                         roam: true,
-                        lambertMaterial: {
-                            detailTexture: './images/data-1491896059428-B1QbPbq6e.jpg',
-                            textureTiling: 20
+                        realisticMaterial: {
+                            detailTexture: '#666',
+                            textureTiling:1,
+                            metalness:0,
+                            roughness:0.5,
+
+                        },
+                        label: {
+                            show: false,
+                            textStyle: {
+                                color: '#fff', //地图初始化区域字体颜色
+                                fontSize: 8,
+                                opacity: 1,
+                                backgroundColor: 'rgba(0,23,11,0)'
+                            },
                         },
                         postEffect: {
                             enable: true,
                             SSAO: {
                                 enable: true,
-                                radius: 3,
+                                radius: 1,
                                 quality: 'high'
                             }
                         },
                         shading: 'realistic',
                         itemStyle: {
-                            areaColor: '#0a0a0a',
+                            color: '#4b4b4b',
                             opacity: 1,
                             borderWidth: 0.4,
-                            borderColor: '#111'
-                        },
-                        label: {
-                            show: true,
-                            textStyle: {
-                                color: '#373737', //地图初始化区域字体颜色
-                                fontSize: 8,
-                                opacity: 1,
-                                backgroundColor: 'rgba(0,23,11,0)'
-                            },
+                            borderColor: '#383838'
                         },
                         emphasis: { //当鼠标放上去  地区区域是否显示名称
                             label: {
